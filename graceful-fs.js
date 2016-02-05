@@ -1,4 +1,4 @@
-var fs = require('fs')
+var fs = require(process.versions.electron ? 'original-fs' : 'fs')
 var polyfills = require('./polyfills.js')
 var legacy = require('./legacy-streams.js')
 var queue = []

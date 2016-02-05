@@ -1,6 +1,6 @@
 'use strict'
 
-var fs = require('fs')
+var fs = require(process.versions.electron ? 'original-fs' : 'fs')
 
 module.exports = clone(fs)
 
